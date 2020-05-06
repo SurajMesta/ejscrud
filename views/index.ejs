@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link
+    rel="stylesheet"
+    href="https://bootswatch.com/3/cosmo/bootstrap.min.css"
+    type="text/css"
+  />
+</head>
+<body>
+    <nav class='navbar navbar-inverse'>
+        <div class="container">
+            <div class="navbar-header">
+                <a href="/" class='navbar-brand'><em>EJS</em></a>
+                <button class= 'navbar-toggle' data-toggle='collapse' data-target='#myDiv'>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
+
+            <div class="navbar-collapse collapse" id='myDiv'>
+                <ul class="nav navbar-nav">
+                    <li><a href="/">Products</a></li>
+                    <li><a href="/create">Create</a></li>
+                </ul>
+            </div>
+         
+
+
+        </div>
+
+    </nav>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12">
+                <h2 class="jumbotron text-center">
+                    Welcome to Index Page...
+                </h2>
+            </div>
+        </div>
+
+        <div class="row">
+            <% for(var i=0;i<posts.length;i++){%>
+            <div class="col-md-6 col-sm-6 col-lg-6 col-xs-12">
+              
+                <div class="panel panel-info">
+                    <div class="panel-heading">
+                        <div class="panel-title">
+                            <h4 class='text-center'><em><%=posts[i].name%></em></h4>
+                        </div>
+                    </div>
+                    <div class="panel-body">
+                   <p>Email:  <em><%=posts[i].email%></em></p> 
+                   <p>Company: <em><%=posts[i].company%></em></p>
+                   <p>Salary: <em><%=posts[i].salary%></em></p>
+                   <p>Description: <em><%=posts[i].description%></em></p>
+                    </div>
+                    <div class="panel-footer">
+                        <a href="/edit/<%=posts[i].name%>"  class=' btn btn-md btn-success'>
+                        <span class='glyphicon glyphicon-edit'></span>
+                        </a>
+
+                        <a href="/delete/<%=posts[i].name%>"  class=' btn btn-md btn-danger pull-right'>
+                            <span class='glyphicon glyphicon-trash'></span>
+                            </a>
+                    </div>
+                </div>
+              
+            </div>
+            <%}%>
+            
+        </div>
+
+     
+    </div>
+    
+</body>
+</html>

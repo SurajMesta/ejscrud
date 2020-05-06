@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link
+    rel="stylesheet"
+    href="https://bootswatch.com/3/cosmo/bootstrap.min.css"
+    type="text/css"
+  />
+</head>
+<body>
+    <nav class='navbar navbar-inverse'>
+        <div class="container">
+            <div class="navbar-header">
+                <a href="/" class='navbar-brand'><em>EJS</em></a>
+                <button class= 'navbar-toggle' data-toggle='collapse' data-target='#myDiv'>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
+
+            <div class="navbar-collapse collapse" id='myDiv'>
+                <ul class="nav navbar-nav">
+                    <li><a href="/">Products</a></li>
+                    <li><a href="/create">Create</a></li>
+                </ul>
+            </div>
+         
+
+
+        </div>
+
+    </nav>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12">
+                <h2 class="jumbotron text-center">
+                    Welcome to create Page...
+                </h2>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-6 col-md-offset-3 well">
+                <form action="/newpost" method='post'>
+                    <div class="form-group">
+                        <label for="">Name:</label>
+                        <input type="text" name='name' required placeholder="Name" class='form-control' autofocus>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="">Email:</label>
+                        <input type="email" name='email' required placeholder='abc@someone.com' class='form-control'>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="">Company</label>
+                        <input type="text" name='company' required placeholder="Company" class='form-control'>
+                    </div>
+
+                    
+                    <div class="form-group">
+                        <label for="">Salary</label>
+                        <input type="number" name='salary' required placeholder='Salary' class='form-control'>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="">Description: </label>
+                        <br>
+                        <textarea name="description" cols="30" rows="10" maxlength=1000 class='form-control'></textarea>
+                    </div>
+
+
+                    <div class="form-group">
+                        <button class='btn btn-success btn-md'>Submit</button>
+                        <button class='btn btn-md btn-danger pull-right' type='reset'>Reset</button>
+                    </div>
+                  
+                </form>
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>
